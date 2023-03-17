@@ -3,7 +3,7 @@
 }
 
 .inner {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@
 
     &-naver {
       width: 60px;
-      height: 40px;
+      height: 60px;
 
       &::after {
         display: block;
@@ -112,66 +112,66 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
+  }
 
-    .customer {
-      &-wrap {
-        display: flex;
-        align-items: center;
+  .customer {
+    &-wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &-add-button {
+      display: flex;
+      padding: 8px 15px;
+      background-color: #efefef;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      color: $color-text;
+
+      &::before {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+        background: url("../img/bell.png") no-repeat center / contain;
+        content: '';
+      }
+    }
+
+    &-num {
+      margin-left: 10px;
+
+      &-count {
+        margin-left: 4px;
       }
 
-      &-add-button {
-        display: flex;
-        padding: 8px 15px;
-        background-color: #efefef;
-        border: 1px solid transparent;
-        border-radius: 20px;
-        color: $color-text;
+      &-info {
+        margin-top: 4px;
+        margin-left: 4px;
 
-        &::before {
+        &::after {
           display: inline-block;
-          width: 14px;
-          height: 14px;
-          margin-right: 5px;
-          background: url("../img/bell.png") no-repeat center / contain;
+          width: 12px;
+          height: 12px;
+          background: url("../img/info.png") no-repeat center / contain;
           content: '';
         }
       }
-
-      &-num {
-        margin-left: 10px;
-
-        &-count {
-          margin-left: 4px;
-        }
-
-        &-info {
-          margin-top: 4px;
-          margin-left: 4px;
-
-          &::after {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background: url("../img/info.png") no-repeat center / contain;
-            content: '';
-          }
-        }
-      }
     }
+  }
 
-    .input-wrap {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      width: 180px;
-      height: 40px;
-      padding: 8px 20px;
-      border: 1px solid transparent;
-      border-radius: 20px;
-      background-color: #efefef;
-    }
+  .input-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 180px;
+    height: 40px;
+    padding: 8px 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #efefef;
   }
 
   &__input {
@@ -206,4 +206,106 @@
     }
   }
 
+  &__gnb {
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      padding: 0 25px;
+      text-transform: uppercase;
+
+      &:first-child {
+        padding: 0;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      color: $color-text;
+    }
+
+    &-more {
+      font-size: 14px;
+    }
+  }
+
+  .swiper {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-index-minus;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &-slide{
+      flex-shrink: 0;
+      border: 1px solid red;
+      
+      img {
+        width: 100%;
+      }
+
+      &__txtbox {
+        position: relative;
+        top: 200px;
+        width: 300px;
+      }
+
+      &__title {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      &__txt {
+        margin-top: 30px;
+        font-size: 16px;
+      }
+    }
+
+    &-button {
+      &-prev, &-next {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 30px;
+        border: 1px solid;
+      }
+
+      &-prev {
+        left: 0;
+      }
+
+      &-next {
+        right: 0;
+      }
+    }
+
+    // &-pagination {
+    //   left: 50%;
+    //   width: 60px;
+    //   height: 20px;
+    //   transform: translateX(-50%);
+    //   border: 1px solid !important;
+    //   z-index: $z-index-minimum;
+
+    //   &-bullets {
+    //     width: 20px;
+    //     height: 20px;
+    //     border-radius: 10px;
+    //     background-color: #efefef;
+    //   }
+    // }
+  }
 }
