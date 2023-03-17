@@ -12,21 +12,24 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <nav class="header__nav">
-        <a href="www.naver.com" class="link-naver">
-          <span class="blind">네이버 바로가기</span>
-          <img src="" alt="">
-        </a>
-        <a href="www.naver.com" class="link-shop">
-          <span class="blind">네이버쇼핑 바로가기</span>
-          <span class="link-txt">네이버쇼핑</span>
-        </a>
-        <a href="" class="link-login">
-          <span class="link-txt">로그인</span>
-        </a>
-        <button type="button" class="header__button is-clicked">
-          <span class="blind">더 많은 서비스</span>
-        </button>
+      <div class="inner">
+        <div class="link-wrap">
+          <a href="www.naver.com" class="link-naver">
+            <span class="blind">네이버 바로가기</span>
+          </a>
+          <a href="www.naver.com" class="link-shop">
+            <span class="blind">네이버쇼핑 바로가기</span>
+            <span class="link-txt">네이버쇼핑</span>
+          </a>
+        </div>
+        <div class="link-wrap">
+          <a href="" class="link-login">
+            <span class="link-txt">로그인</span>
+          </a>
+          <button type="button" class="menu-button is-clicked">
+            <span class="blind">더 많은 서비스</span>
+          </button>
+        </div>
         <div class="service">
           <button class="service__setting" type="button"></button>
           <div class="service__favorite">
@@ -89,80 +92,81 @@
             <a href="" class="service__all">전체 서비스보기</a>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
     <main class="main">
-      <h1 class="main__title">
-        <span class="blind">line friends</span>
-        <a href="#" class="main__link">
-          <img src="" alt="">
-        </a>
-      </h1>
-      <div class="main__top">
-        <div class="cunstomer-wrap">
-          <button class="customer-add-button">알림받기</button>
-          <span class="customer-num">
-            관심고객수
+      <div class="inner">
+        <h1 class="main__title">
+          <span class="blind">line friends</span>
+          <a href="#" class="main__link"></a>
+        </h1>
+        <div class="main__top">
+          <div class="customer-wrap">
+            <button type="button" class="customer-add-button">알림받기</button>
+            <span class="customer-num">관심고객수</span>
             <!-- [D] 알림 등록 시 숫자가 올라가는 기능 추가 -->
-            <span class="cunstomer-num-increase">282,708</span>
-          </span>
+            <span class="customer-num-count">282,708</span>
+            <button type="button" class="customer-num-info" title="도움말"></button>
+          </div>
+          <div class="input-wrap">
+            <input type="text" class="main__input is-clicked">
+            <label for="" class="main__label">검색어를 입력해보세요</label>
+            <button class="main__search-button"></button>
+          </div>
         </div>
-        <input type="text" class="main__input">
-        <label for="" class="main__label">검색어를 입력해보세요</label>
-        <button class="main__search-button"></button>
-      </div>
-      <div class="main__gnb-wrap">
-        <ul class="main__gnb-list">
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">best</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">best</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">best</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">best</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">new</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">월간선물</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">sale</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">캐릭터</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">브랜드</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">카테고리</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">전체상품</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">묻고 답하기</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">공지사항</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">리뷰이벤트</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">쇼핑스토리</a>
-          </li>
-          <li class="main__gnb-item">
-            <a href="" class="main__gnb-link">판매자 정보</a>
-          </li>
-        </ul>
-        <button type="button" class="main__gnb-more">더보기</button>
+        <div class="main__gnb-wrap">
+          <ul class="main__gnb-list">
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">best</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">best</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">best</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">best</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">new</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">월간선물</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">sale</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">캐릭터</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">브랜드</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">카테고리</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">전체상품</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">묻고 답하기</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">공지사항</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">리뷰이벤트</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">쇼핑스토리</a>
+            </li>
+            <li class="main__gnb-item">
+              <a href="" class="main__gnb-link">판매자 정보</a>
+            </li>
+          </ul>
+          <button type="button" class="main__gnb-more">더보기</button>
+        </div>
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -183,6 +187,8 @@
         <div class="swiper-button-next"></div>
       </div>
     </main>
+
+    <footer></footer>
   </div>
 </body>
 
