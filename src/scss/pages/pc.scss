@@ -5,10 +5,13 @@
 .inner {
   max-width: 70%;
   margin: 0 auto;
+  z-index: calc($z-index-minimum + 1);
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, .07);
+  z-index: calc($z-index-minimum + 1);
 
   .inner {
     display: flex;
@@ -25,7 +28,7 @@
 
     &-naver {
       width: 60px;
-      height: 60px;
+      height: 50px;
 
       &::after {
         display: block;
@@ -214,6 +217,7 @@
     
     &-list {
       display: flex;
+      flex-shrink: 0;
     }
 
     &-item {
@@ -241,7 +245,6 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: $z-index-minus;
 
     &-wrapper {
       display: flex;
@@ -250,62 +253,86 @@
     }
 
     &-slide{
-      flex-shrink: 0;
-      border: 1px solid red;
+      position: relative;
       
       img {
+        display: block;
         width: 100%;
+        height: auto;
       }
 
       &__txtbox {
-        position: relative;
-        top: 200px;
+        position: absolute;
+        top: 300px;
+        left: 15%;
         width: 300px;
       }
 
       &__title {
-        font-size: 40px;
+        font-size: 50px;
         line-height: 50px;
+        letter-spacing: 0.1;
       }
 
       &__txt {
-        margin-top: 30px;
-        font-size: 16px;
+        margin-top: 20px;
+        font-size: 18px;
       }
     }
 
     &-button {
       &-prev, &-next {
         display: inline-block;
-        position: relative;
-        width: 20px;
-        height: 30px;
-        border: 1px solid;
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-50%);
+        border: 1px solid $color-grey;
+        background-color: $color-grey;
+        opacity: .3;
+
+        &::after {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background: url(../img/arrow.png) no-repeat center / contain;
+          content: '';
+        }
       }
 
       &-prev {
-        left: 0;
+        left: 5%;
+        &::after {
+          right: 2px;
+          transform: rotate(90deg);
+        }
       }
 
       &-next {
-        right: 0;
+        right: 5%;
+        &::after {
+          left: 2px;
+          transform: rotate(-90deg);
+        }
       }
     }
 
-    // &-pagination {
-    //   left: 50%;
-    //   width: 60px;
-    //   height: 20px;
-    //   transform: translateX(-50%);
-    //   border: 1px solid !important;
-    //   z-index: $z-index-minimum;
+    &-pagination {
+      position: absolute;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      z-index: $z-index-minimum;
 
-    //   &-bullets {
-    //     width: 20px;
-    //     height: 20px;
-    //     border-radius: 10px;
-    //     background-color: #efefef;
-    //   }
-    // }
+      &-bullet {
+        background-color: $color-grey;
+
+      &-active {
+        background-color: $color-white;
+      }
+      }
+    }
   }
 }
