@@ -1,4 +1,4 @@
-let swiper = new Swiper(".swiper", {
+let swiper = new Swiper(".swiper-main", {
   cssMode: true,
   navigation: {
     nextEl: ".swiper-button-next",
