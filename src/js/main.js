@@ -24,3 +24,17 @@ let swiper2 = new Swiper(".swiper-story", {
   },
 
 });
+
+let swiper3 = new Swiper(".swiper-new", {
+  cssMode: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: "true",
+  },
+});
