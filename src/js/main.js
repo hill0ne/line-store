@@ -6,6 +6,7 @@ let swiper = new Swiper(".swiper-main", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: "true",
   },
 
   autoplay: {

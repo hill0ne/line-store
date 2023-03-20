@@ -143,19 +143,15 @@ legend {
   white-space: nowrap;
 }
 
-.wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .inner {
   z-index: 2;
 }
 
 .header {
   position: absolute;
-  width: 70%;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   z-index: 2;
 }
@@ -163,6 +159,8 @@ legend {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
 }
 .header .link-wrap {
   display: inline-flex;
@@ -222,8 +220,12 @@ legend {
 
 .widget {
   position: absolute;
-  top: 60px;
+  top: 70px;
+  left: 0;
+  right: 0;
   width: 70%;
+  margin: 0 auto;
+  z-index: 2;
 }
 .widget__title {
   display: inline-block;
@@ -341,11 +343,7 @@ legend {
   font-size: 14px;
 }
 
-.swiper {
-  height: 700px;
-}
 .swiper-main {
-  position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -417,21 +415,18 @@ legend {
   transform: rotate(-90deg);
 }
 .swiper-pagination {
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
-  z-index: 1;
+  margin-bottom: 15px;
 }
 .swiper-pagination-bullet {
   background-color: #ffffff;
+  opacity: 1;
 }
 .swiper-pagination-bullet-active {
   background-color: #444;
 }
 
 .story {
-  border: 1px solid;
+  overflow: hidden;
 }
 .story .inner {
   border: 1px solid red;

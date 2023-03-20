@@ -1,7 +1,5 @@
 .wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 }
 
 .inner {
@@ -10,14 +8,18 @@
 
 .header {
   position: absolute;
-  width: 70%;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .07);
   z-index: calc($z-index-minimum + 1);
-
+  
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
   }
 
   .link {
@@ -90,8 +92,13 @@
 
 .widget {
   position: absolute;
-  top: 60px;
+  top: 70px;
+  left: 0;
+  right: 0;
   width: 70%;
+  margin: 0 auto;
+  z-index: calc($z-index-minimum + 1);
+
 
   &__title {
     display: inline-block;
@@ -240,16 +247,12 @@
   }
 }
 
-
-
 .contents {
 }
 
 .swiper {
-  height: 700px;
-
+  
   &-main {
-    position: absolute;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -339,14 +342,11 @@
   }
 
   &-pagination {
-    position: absolute;
-    left: 50%;
-    bottom: 14px;
-    transform: translateX(-50%);
-    z-index: $z-index-minimum;
+    margin-bottom: 15px;
 
     &-bullet {
       background-color: $color-white;
+      opacity: 1;
 
       &-active {
         background-color: $color-text;
@@ -356,7 +356,7 @@
 }
 
 .story {
-  border: 1px solid;
+  overflow: hidden;
 
   .inner {
     border: 1px solid red;
