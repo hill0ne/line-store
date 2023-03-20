@@ -95,6 +95,9 @@
   margin: 0 auto;
   z-index: calc($z-index-minimum + 1);
 
+  .inner {
+    width: 100%;
+  }
 
   &__title {
     display: inline-block;

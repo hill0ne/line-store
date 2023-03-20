@@ -227,6 +227,9 @@ legend {
   margin: 0 auto;
   z-index: 2;
 }
+.widget .inner {
+  width: 100%;
+}
 .widget__title {
   display: inline-block;
   position: absolute;
