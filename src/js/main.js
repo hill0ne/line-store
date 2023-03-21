@@ -38,3 +38,17 @@ let swiper3 = new Swiper(".swiper-new", {
     clickable: "true",
   },
 });
+
+let swiper4 = new Swiper(".swiper-review", {
+  cssMode: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: "true",
+  },
+});
